@@ -1,0 +1,30 @@
+<mvc:View
+    controllerName="logaligroup.sapui5.controller.App"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+>
+	<Page id="page" title="{i18n>appTitle}">
+        <landmarkInfo>
+            <PageAccessibleLandmarkInfo rootRole="Region"
+                                        rootLabel="{i18n>overviewRootLabel}"
+                                        contentRole="Main"
+                                        contentLabel="{i18n>overviewContentLabel}"
+                                        headerRole="Banner"
+                                        headerLabel="{i18n>overviewHeaderLabel}"/>
+            
+            
+        </landmarkInfo>
+        <headerContent>
+                                <Button id="helloDialogHeader" 
+                                    press="onOpenDialogHeader" 
+                                    class="sapUiSmallMarginEnd"
+                                    icon="sap-icon://action"/>
+        </headerContent>
+		<content> 
+            <mvc:XMLView viewName="logaligroup.sapui5.view.HelloPanel"/>
+            <mvc:XMLView viewName="logaligroup.sapui5.view.InvoicesList"/>
+        </content>
+	</Page>
+
+</mvc:View>
